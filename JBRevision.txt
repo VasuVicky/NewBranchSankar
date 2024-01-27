@@ -1,0 +1,202 @@
+1) Servlets :
+==========
+Servlet is a server side technology , which is used to develop web applications in java , and which generates dynamic content on the server side, Servlet is a pure java code ,  Servlet existed as an API in java and this API contains many classes , interfaces and method to be worked with java servlets.To implements the servlet in java by developing a web application in three ways : a) using Servlet Interface b) using GenericServlet class c) using HttpServlet class.
+
+Servlet is the root interface and GenericServlet is the sub class of the servlet interface and HttpServlet is the subclass of the GenericServlet class ,HttpServlet class is indirectly implemetns the Servlet interface. 
+
+Servlet interface contains an abstraction methods , if you use the Servlet interface then we should need to implement the all abstarction methods inside the Servlet interface they are : init() , service() , destroy(), getServletConfig() , getServletInfo() . 
+
+Servlets completly written in java , servlets are the platform independent.Servlets follows Object oriented programming.
+
+Advtages :
+=========
+platform independent , extensibility (using javabeans , jsp, and other frameworks),  Multithreading, SessionManagement , Security , Integration with enterprise java , Support for protocols , Ease of Maintainance , community and documentation.
+
+Dis Advantages :
+=============
+ Complexity(more number of lines) , Mixing Business logic with presentations(html written in servlet directly) , Deployment complexity(re compile , re deploy , reconfig), Verbosity(due to complexity it migt to raise errors too).
+			
+
+For each and every request container creates a thread in servlets,init() , desetroy() methods are executed at only once in a application , but the service method will execute for each and every request by the container.
+
+CGI : 
+====
+Common Gateway Interface , which is also a technology used at server side before servlet we use CGI , CGI is a process oriented technology , which is completly developed using c, c++ and perl and which is procedure oriented programming language , which acts as  a controller in the web application based on the MVC design pattern.
+
+For each and every request container creates a process in CGI , we know that difference b/w process and thread , process is heavy weight and independent flow of execution, while thread is a independent flow of execution of the same program , and thread occupies a less memory compare to process, The preformance of the process is low and execution time is more , in threads the performace is high and execution time is low.
+
+Finally CGI preformance is lower than Servlets , Servlets are the advance technology than CGI.
+All web servers supports CGI programming , Servlets are developed by SunMicorSystems.
+
+2) JSP : Java Server Pages  is technology to develop web applications in java, JSP is the advance technology than servlets and JSP is developed by sunmicrosystems,The main intension of the jsp is to develop dynamic web pages on the server side by generating dynamic content ,  JVM doesn't understand the jsp code directly virtually jsp code converts into servlet that's why jvm is able to run the servlets in the webserver. Jsp allows us to use the java code and the html code together means jsp is a combination of presentation logic and implementation logic. And intension of the jsp is to reduce the java code unlike servlets. 
+
+To implemet the jsp page in java web development we use JSP elements , To save the jsp file with .jsp extension, 
+JSP elemetns are classified into 3 type : jsp Directives , jsp ScriptingElements , jsp Actions.
+
+a)jsp Directives : which are used to include the web resource files and java api / packages and used to adding libraries which are use by the jsp pages.
+
+jsp Directives are again classified into 3 types : 
+
+1. page directives : this is used to importing packages in java , and setting some of the properties supported by jsp.
+it is denoted by <% %> and page directive contains attributes which specifes which task should be done by the jsp.
+(language , contentType ,info ,  import , extends , buffer , autoFlush , errorPage , isErrorPage , isThreadSafe , isELIgnored)
+
+jsp standard syntax :  <%@page [attributes list]%>			ex : <%@page import ="java.util.* , java.lang.*"%>
+
+xml based syntax :  <jsp:directive.directivename [attributes list]>   ex : <jsp:directive.page import="java.io.*">
+
+2. include directives : To add the web resource related file , and it's attibute is file.
+
+<%@include file = "a.html , b.html"%>  , <jsp:directive.include file="A.jsp">
+
+3. taglib directives : To define custom tags.(optional)
+
+2) jsp ScriptingElements : which are mainly used to embed the java code into the jsp page .
+
+and it is classified into 3 types : jspDeclaration , jspScriptlets , jspExpressions.
+
+1) jsp Declerations : which are used to create a decleration of the variable and method in java.
+
+it is denoted with : <%! int a=10, int b=20 ;  void m() {} ; %>
+
+2)jsp Scriptlets : which are used to specify the java blocks in the jsp page (which is widely used tag).
+
+it is denoted with : <%  String a = String.valueOf(10); %>
+
+3)jsp Expressions : which are used to evaluate the java expressions , final answers.
+
+it is denoted with : <%= a+b ; %>
+
+3) jsp Actions : which are used to maintain the file and libraries use for the jsp page in the form declerations and the implementation is available in the classess folder under WEB-IFN, which makes see the code as lesser without complexitly which provide the modulations and readability , the intension of the jsp actions are to remove the java code completly from the jsp page.
+
+it is of 2 types : standardActions , Customised Actions
+
+1) StandardActions (predefined actions): <jsp:include file="path of the file">,<jsp:forward>,<jsp:setProperty>,<jsp:getProperty>,<jsp:useBean> etc.
+
+2)Customised Actions(User defined actions): (optional)
+
+in modern technology instead of this jsp action we are using spring or angualr , react frameworks.
+
+3)HTML:
+========
+ Hyper Text mark up language , which is used to develope web pages , structure / skeleton of the web pages, the collection of web pages is called browser. Html is the type of scripting language , and it is the base language to learn any scripting languages for web development , which is like an expressive language and more readable and easy to understand and easy to learn by anyone.By deafault Html pages doesn't contains any style for look and attractive by implementing this we use CSS.
+
+Html is a collection of elements / tags : by using html we can define , background images , background colors , headings , paragraphs , hyper links , tables , frames , font properties , border properties , layout properties and box properties .
+
+tags : 
+=====
+<b>,<i>,<u>,<emp>,<big>,<small>,<strong>,<h1>.....<h6>,<p>,<img>,<button>,<link>,<html>,<body>,<title>,<abbr>,<table>,<tr>,<th>,<td>,<script>,<q>,<code>,<mark>,<del>,<strike>,<sub>,<sup>,<style>,<li>,<ol>,<ul>,<dl>,<a>,<form>,<input>,<div>,<pre>,<br/>,<hr>,<span>
+
+4)CSS : 
+======
+Cascading Style Sheets , and it is a technology used to applying style to the web pages developed by html.
+When the HTML & CSS together then we can develop a more look and feel good attractive web pages, and these are client side technologies in web development. 
+
+css style are 3 types : 
+=================
+
+1) inline styles : used with in the open tag.(1st importance) : this type of styles are only belongs to the specific tag.
+
+2)internal styles : use with in the style tag in the head part(second importance). which provide the modularity and readability the code existed in the head part .
+
+3) external styles : use with the another page with .css extension and embed with required html page.(thrid importance).
+which provides the modularity and decrease the complexity of the code by maintaining the code in the external page.
+
+the most widely use case in css is : external and internal styles.
+
+css styles are used inside the tags , and it is a collection of attributes and properties. every attribute and property defines an action to be reflected on the elements of the web page.
+
+The attribute and their associated values are separated with = equal symbol and attribute to attribute having space.
+
+inline style is a collection of attributes : class , id , align , style.
+
+internal style and external styles having styles in the form of rulesets , a rule set is a collection of propertis and their associated values separated with : (colon), and terminated with semi colon.
+
+in internal styles , the styles are using in the head section with in the style tag. like h1{ border : 2px solid red; }
+in external css also using like this but which is completly existed in the another page. .h1{class selectors} , #h2{id selectors}
+
+The most commonly used style are external css for implemeting modularity and reducing complexity, the most commonly used attributes are class and id , class allows us to the same rulest to any number of tags or html elements , but id allows us to use that reluset uniquly not duplicate for allowing to tags. 
+
+class attribute : 
+=============
+
+<h2 class="hello"> hello this is class attribue. </h2>  : .hello { color : yello; background-color : blue; }
+
+<h3 class="hello">applying the above same style to the h3 also means using duplicate  ruleset hello using class attribute</h3>
+
+id attribute : 
+==========
+
+<h2 id="hai"> hello this is id attribue. </h2>  : #hai { color : yello; background-color : blue; }
+
+<h3 id="hai">applying the above same style to the h3 but it is not applied because id identifies the tag uniquely not duplicate.</h3>
+
+we have  types of ways to use the css selectors : 
+
+attribute selectors(apply to the attribute inside the form) , class selectors(.h1 applied to duplicates also) , id selectors(#h1 uniquely apply the styles to single tag) , descedning selectors(div p aply to p inside the div) , universal selectors (*aply to all elements in the page.) , pseudo-classes are used to select and apply style to the specified tag / elements : (:hover, :focus,:active, : first-child , : last-child , :nth-child(num), : nth-of-type(odd/even), :not(.special)).
+
+ex : 
+===
+
+a:hover {color : red;}
+input:focus {border : 2px solid blue; }
+button:active {background-color : #ff0f34; }
+ul li : first-child { color : magenta ; }
+ul li : last-child {color : pink; }
+div p: nth-child(3) {border : 2px solid green; } //applying style to the specified paragram in the div element.
+table tr:nth-of-type(even) {background-color : blue; color : yellow; }
+li:not(.special) {font-style : italic; }
+ 
+
+5) SQL :
+======
+ Structure Query Language , which is mainly used for organize and managing data , sql is the query language used for creating databases and storing large amount of data. Which is the standard language developed by IBM in1970's, used in all RDBMS like , Oracle , MySQL , PostgreSQL , SQLite. Relational data base management systems the data is organize in tables.
+
+1.Commands and quries , clauses , constraints , keywords , datatypes , operators , conditions , functions , joins , subquries etc.
+
+6) GIT HUB : 
+===========
+Git Hub is the web application which can be run on server side over internet, which allows the user to store data and available the data to specified members by you. Git Hub is mainly used for VCS Version Control System, and it is also called as Developers Community. which is mostly used in all organizations and startups of the tech and also others, git existed as a cloud to store and manipulate and organize your data from any device. You can interact with git tool / software in two by locally or gloably , locally mean within your computer globally means from any compute by logeed in into the git account.
+
+Git Hub is like a server , it is a collection of repositories , repositiory is a collection of branches, branch is a collection of files or folders called projects.
+
+if you want to store or share your project to mulitple persons or publicly or privately git is the best tool, git allows you to store and share your project to desired persons, if you want to store your project then first you will create the git hub account and after , you should create a repository for you , we can create n number of repositories, and by default every repository having a default branch called main or master branch. if you want to create new branches we can , except main branch every sub branch specifies a testing area , after testing the code in the sub branch you need to add that changes to the existing main branch by implementing this we can use pull requests, and merge requests. either you can do it by manually from the browser.
+or you can add the project by the local machine not remotly, by having a url of the repository.
+
+procedure for dowloading the some ones project in your local machine : 
+
+git init
+git clone url of that target repository.
+
+proceduere for adding projects / files to the existing repository : 
+
+git init
+
+git add .
+
+git commit -m"adding project this is a comment for saving."
+
+git remote add origin url.
+
+git push origin main(main is the branch name) //sometime it doesn't add then we need to create a branch
+
+
+git checkout -b "newbranchname"
+
+git add . 
+
+git commit -m"adding project this is a comment for saving."
+
+git remote add origin url.
+
+git push origin "newbranchname" : pusing the code also called as pull request(based on branch name)
+
+if you want to find the no.of commits : git status , for info using : git log
+
+
+7) NetBeans : NetBeans is the Integrated Development Environment(IDE), which supports all languages like java is the one of the language , to developing web applications net beans is the one of the best choice, net beans provide a default web servers called apcahe tomcat and glashfish server , we no need to install explicitly.
+
+8)Eclipse : Eclipse is the Integrated Development Environment(IDE), which supports all languages like java is the one of the language , to developing web applications Eclipse is the one of the best choice, Eclipse doesn't provide a default web server we need to install explicitly.
+
+
+
